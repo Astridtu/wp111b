@@ -1,0 +1,17 @@
+function vadd(a, b) {
+  if (a.length !== b.length) {
+    throw new Error("Vectors must be of the same length");
+  }
+  
+  var result = [];
+  for (var i = 0; i < a.length; i++) {
+    result.push(a[i] + b[i]);
+  }
+  return result;
+}
+//To test this function, you can create two vectors and call the vadd function with them://
+var a = [1, 2, 3];
+var b = [4, 5, 6];
+var c = vadd(a, b);
+
+console.log(c); // Output: [5, 7, 9]
