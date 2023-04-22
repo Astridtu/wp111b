@@ -1,0 +1,16 @@
+function count(arr) {
+  var cmap = {};
+  for (var i = 0; i < arr.length; i++) {
+    var word = arr[i];
+    if (cmap[word]) {
+      cmap[word]++;
+    } else {
+      cmap[word] = 1;
+    }
+  }
+  return cmap;
+}
+//To use this function to count the number of times each word appears in the input array list, you can call the function as follows:
+var list = ['a', 'dog', 'chase', 'a', 'cat'];
+var cmap = count(list);
+console.log(cmap); // Output: { a: 2, dog: 1, chase: 1, cat: 1 }
