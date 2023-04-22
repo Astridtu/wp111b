@@ -1,0 +1,10 @@
+function repeat(f, n) {
+  var result = new Array(n);
+  for (var i = 0; i < n; i++) {
+    result[i] = f();
+  }
+  return result;
+}
+//10 random numbers using this function, you can call it with Math.random as the function argument and 10 as the number of times to call the function:
+var randomNumbers = repeat(Math.random, 10);
+console.log(randomNumbers); // Output: an array of 10 random numbers between 0 
