@@ -1,0 +1,17 @@
+function vdot(a, b) {
+  if (a.length !== b.length) {
+    throw new Error("Vectors must be of the same length");
+  }
+  
+  var result = 0;
+  for (var i = 0; i < a.length; i++) {
+    result += a[i] * b[i];
+  }
+  return result;
+}
+//To test this function, you can create two vectors and call the vdot function with them://
+var a = [1, 2, 3];
+var b = [4, 5, 6];
+var c = vdot(a, b);
+
+console.log(c); // Output: 32
