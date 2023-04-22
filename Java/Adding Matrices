@@ -1,0 +1,22 @@
+function madd(a, b) {
+  if (a.length !== b.length || a[0].length !== b[0].length) {
+    throw new Error("Matrices must have the same dimensions");
+  }
+  
+  var rows = a.length;
+  var cols = a[0].length;
+  var result = new Array(rows);
+  for (var i = 0; i < rows; i++) {
+    result[i] = new Array(cols);
+    for (var j = 0; j < cols; j++) {
+      result[i][j] = a[i][j] + b[i][j];
+    }
+  }
+  return result;
+}
+//To test this function, you can create two matrices and call the madd function with them://
+var a = [[1, 2], [3, 4]];
+var b = [[5, 6], [7, 8]];
+var c = madd(a, b);
+
+console.log(c); // Output: [[6, 8], [10, 12]]
